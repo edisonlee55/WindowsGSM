@@ -46,19 +46,19 @@ namespace WindowsGSM.DiscordBot
 
 		private async Task On_Bot_Ready()
 		{
-			try
-			{
-				Stream stream = Application.GetResourceStream(new Uri($"pack://application:,,,/Images/WindowsGSM{(string.IsNullOrWhiteSpace(_donorType) ? string.Empty : $"-{_donorType}")}.png")).Stream;
-				await _client.CurrentUser.ModifyAsync(x =>
-				{
-					x.Username = "WindowsGSM";
-					x.Avatar = new Image(stream);
-				});
-			}
-			catch
-			{
-				// ignore
-			}
+			// try
+			// {
+			// 	Stream stream = Application.GetResourceStream(new Uri($"pack://application:,,,/Images/WindowsGSM{(string.IsNullOrWhiteSpace(_donorType) ? string.Empty : $"-{_donorType}")}.png")).Stream;
+			// 	await _client.CurrentUser.ModifyAsync(x =>
+			// 	{
+			// 		x.Username = "WindowsGSM";
+			// 		x.Avatar = new Image(stream);
+			// 	});
+			// }
+			// catch
+			// {
+			// 	// ignore
+			// }
 
 			List<Task> tasks = new List<Task>
 			{
